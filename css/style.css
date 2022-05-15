@@ -748,3 +748,7 @@ font-style: normal;
 .filter-link:focus .img-overlay-block{
   transform: translateY(0);
 }
+/* forms */
+textarea {
+  resize: none;
+}
