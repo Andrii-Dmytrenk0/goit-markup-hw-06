@@ -68,32 +68,33 @@
                             </svg>
                     </button>
                     <form name="signup_form" autocomplete="on" novalidate>
-                        <div class="">
+                        <h2 class="form-label">Оставьте свои данные, мы вам перезвоним</h2>
+                        <div class="input-info">
                         <label for="name">Имя</label>
                         <input type="text" name="name" id="name" autofocus />
                         </div>
 
-                        <div class="">
+                        <div class="input-info">
                         <label for="tel">Телефон</label>
                         <input type="tel" name="tel" id="tel">
                         </div>
 
-                        <div class="">
+                        <div class="input-info">
                         <label for="email">Почта</label>
                         <input type="email" name="email" id="email">
                         </div>
 
-                        <div class="">
-                        <input type="checkbox" name="polisy" id="polisy">
-                        <label for="polisy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-                        </div>
-
-                        <div class="">
+                        <div class="feetback">
                         <label for="feetback">Комментарий</label>
                         <textarea name="feetback" id="feetback" rows="10"></textarea>
                         </div>
+
+                        <div class="polisy">
+                        <input type="checkbox" name="polisy" id="polisy">
+                        <label for="polisy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+                        </div>
                         
-                        <button type="submit">Отправить</button>
+                        <button type="submit" class="form-button">Отправить</button>
                     </form>
                     </div>
                 </div>
@@ -428,6 +429,12 @@
                         </li>
                     </ul>
                 </div>
+                <form>
+                    <label for="subscribe">Подпишитесь на рассылку</label>
+                    <input type="text" name="subscribe">
+
+                    <button type="submit">Подписаться</button>
+                </form>
         </div>
     </footer>
     <script src="./js/modal.js"></script>
