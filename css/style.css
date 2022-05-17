@@ -290,6 +290,7 @@ align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
+
 /* hang-section */
 .hang-list{
   display: flex;
@@ -749,6 +750,10 @@ font-style: normal;
   transform: translateY(0);
 }
 /* forms */
+.link-polisy {
+  text-decoration: underline;
+  color: var(--acent-color);
+}
 textarea {
   resize: none;
 }
@@ -765,6 +770,8 @@ textarea {
     margin-bottom: 30px;
 }
 .input-info{
+  display: flex;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 28px;
@@ -773,33 +780,96 @@ textarea {
 .input-info:first-child{
   margin-top: 0;
 }
+.input-info > label{
+  position: absolute;
+
+  top: -20px;
+  left: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  
+  letter-spacing: 0.01em;
+
+  color: var(--title-text-color);
+}
+.input-info > svg {
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+  left: 53px;
+  top: 11px;
+}
+.input-info > input {
+  width: 448px;
+  height: 40px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
 .feetback{
+  position: relative;
+  display: flex;
+
   margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
 }
+.feetback > label {
+  position: absolute;
+
+  top: -20px;
+  left: 40px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  
+  letter-spacing: 0.01em;
+  
+  color: var(--title-text-color);
+
+}
+.feetback > textarea {
+  width: 448px;
+  height: 120px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
 .polisy{
+  display: flex;
+
+  justify-content: center;
+
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
 }
+
 .form-button{
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 40px;
 
   font-family: inherit;
-    cursor: pointer;
-    background-color: var(--acent-color);
-    color: var(--h1-text-color);
+  cursor: pointer;
+  background-color: var(--acent-color);
+  color: var(--h1-text-color);
   
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.8;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
   
-    letter-spacing: 0.06em;
+  letter-spacing: 0.06em;
   
-    border-radius: 4px;
-    padding: 10px 32px;
-    min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
 }
