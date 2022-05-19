@@ -821,6 +821,19 @@ textarea {
   padding-bottom: 14px;
   padding-left: 42px;
 }
+.input-svg{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-text {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-text:focus-within{
+  outline: transparent;
+  border-color: var(--acent-color);
+}
+.input-text:focus-within+.input-svg {
+  fill: var(--acent-color);
+}
 .feetback{
   position: relative;
   display: flex;
@@ -854,24 +867,51 @@ textarea {
   border-radius: 4px;
 
   padding: 12px 16px;
+}
+.feetback textarea::placeholder{
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-
+    
   color: rgba(117, 117, 117, 0.5);
 }
 .polisy{
   display: flex;
-
+  position: relative;
   justify-content: center;
-
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
 }
-.polisy > input {
-  margin-right: 9px;
+.polisy > label {
+  margin-left: 24px;
+
+  font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+.checkbox{
+  appearance: none;
+}
+.icon-checkbox {
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--primiry-text-color);
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  position: absolute;
+  left: 54px;
+  top: 4px;
+}
+.checkbox:checked + .icon-checkbox{
+  background-color: var(--acent-color);
+  border: 2px solid var(--acent-color);
 }
 .form-button{
   margin-right: auto;
@@ -892,6 +932,8 @@ textarea {
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 /* form-footer */
 .input-wrap{
@@ -936,6 +978,7 @@ textarea {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   background: var(--acent-color);
   color: var(--h1-text-color);
