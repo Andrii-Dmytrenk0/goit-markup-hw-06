@@ -849,7 +849,7 @@ textarea {
   display: flex;
   align-items: flex-start;
 
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 .feetback > textarea {
   height: 120px;
