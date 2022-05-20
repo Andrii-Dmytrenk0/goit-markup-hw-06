@@ -261,6 +261,8 @@ align-items: center;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal{
+  padding: 40px;
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -279,10 +281,12 @@ align-items: center;
 }
 .button-close{
   position: absolute;
-  top: 0;
-  right: 0;
-  padding-top: 8px;
-  padding-right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  top: 8px;
+  right: 8px;
   background-color: var(--h1-text-color);
   cursor: pointer;
 
@@ -292,11 +296,6 @@ align-items: center;
 .button-close:hover{
   fill: var(--acent-color);
 }
-.close-svg{
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-}
-
 /* hang-section */
 .hang-list{
   display: flex;
@@ -524,6 +523,9 @@ align-items: center;
 .footer {
   background-color: var(--background-hero);
   padding:60px 0;
+}
+.footer-adrees-block{
+  flex-grow: 1;
 }
 .footer-list{
   margin-bottom: 9px;
@@ -772,25 +774,20 @@ textarea {
 
     color: var(--primiry-text-color);
 
-    margin: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .input-info{
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 28px;
-  margin-top: 28px;
+  margin-bottom: 10px;
 }
 .input-info:first-child{
   margin-top: 0;
 }
 .input-info > label{
-  position: absolute;
-
-  top: -20px;
-  left: 40px;
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -798,6 +795,8 @@ textarea {
   letter-spacing: 0.01em;
 
   color: var(--title-text-color);
+
+  margin-bottom: 4px;
 }
 .input-info > svg {
   width: 18px;
@@ -808,11 +807,8 @@ textarea {
   top: 11px;
 }
 .input-info > input {
-  width: 448px;
   height: 40px;
-
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -837,16 +833,11 @@ textarea {
 .feetback{
   position: relative;
   display: flex;
+  flex-direction: column;
 
   margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
 }
 .feetback > label {
-  position: absolute;
-
-  top: -20px;
-  left: 40px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -855,13 +846,14 @@ textarea {
   
   color: var(--title-text-color);
 
+  display: flex;
+  align-items: flex-start;
+
+  padding-bottom: 4px;
 }
 .feetback > textarea {
-  width: 448px;
   height: 120px;
-
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -880,12 +872,12 @@ textarea {
   display: flex;
   position: relative;
   justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 30px;
 }
 .polisy > label {
-  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-weight: 400;
     font-size: 14px;
@@ -898,26 +890,19 @@ textarea {
 .icon-checkbox {
   width: 16px;
   height: 15px;
-
+  margin-right: 8px;
   border: 2px solid var(--primiry-text-color);
   border-radius: 2px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  position: absolute;
-  left: 54px;
-  top: 4px;
 }
 .checkbox:checked + .icon-checkbox{
   background-color: var(--acent-color);
   border: 2px solid var(--acent-color);
 }
 .form-button{
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 40px;
-
   font-family: inherit;
   cursor: pointer;
   background-color: var(--acent-color);
@@ -933,16 +918,15 @@ textarea {
   padding: 10px 32px;
   min-width: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
 }
 /* form-footer */
 .input-wrap{
   display: flex;
   align-items: flex-end;
+  margin-left: 93px;
 }
 .subscribe-block{
   margin-right: 12px;
-  margin-left: 93px;
 
   display: flex;
   flex-direction: column;
